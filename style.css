@@ -9,12 +9,13 @@ html,
 body {
     height: 100%;
     width: 100%;
+    min-width: 850px;
 }
 
 body {
     font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     display: grid;
-    grid-template-columns: 1fr 3.5fr;
+    grid-template-columns: 275px 3.5fr;
     grid-template-rows: 1fr 3fr;
 }
 
@@ -59,9 +60,101 @@ ul > li {
 
 .header {
     background-color: #ffffff;
-    box-shadow: 0px 10px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 3fr 1.5fr;
+    padding: 15px 50px 5px 50px;
+    gap: 15px 50px;
+}
+
+.search {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    place-content: center;
+    gap: 25px;
+}
+
+.search-bar {
+    background-color: #e2e8f0;
+    color: black;
+    height: 30px;
+    border-style: none;
+    border-radius: 50px;
+}
+
+.search-icon {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.greeting {
+    display: grid;
+    grid-template-columns: 80px 350px;
+    align-items: center;
+    letter-spacing: 0.5px;
+}
+
+.greeting-text > p:first-child {
+    font-weight: 600;
+    font-size: 12px;
+    padding-bottom: 5px;
+}
+
+.greeting-text > p:last-child {
+    font-weight: 1000;
+    font-size: 20px;
+    padding-top: 5px;
+}
+
+.user-settings {
+    display: grid;
+    grid-template-columns: 0.25fr 0.25fr 1fr;
+    justify-self: flex-end;
+    justify-items: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.notification-bell {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.user-settings > p:last-child {
+    justify-self: flex-start;
+    font-weight: bold;
+}
+
+.action-buttons {
+    display: grid;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-self: flex-end;
+    justify-items: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.action-buttons button {
+    background-color: #1992d4;
+    color: white;
+    font-size: 15px;
+    padding: 7px 22px 7px 22px;
+    border-style: none;
+    border-radius: 15px;
 }
 
 .main-content { 
-    background-color: rgba(226,232,240,255);
+    background-color: #e2e8f0;
 }
